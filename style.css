@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Grenze+Gotisch:wght@100;200;300;400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 0 5%;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+video {
+    object-fit: cover;
+    width: 100vh;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .topnav {
+    font-family: 'baumans', cursive;
+    overflow: hidden;
+  }
+
+  .topnav a {
+    float: left;
+    color: hsl(36, 3%, 66%);
+    text-align: center;
+    font-size: 14pt;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #fdaf47;
+    cursor: pointer;
+    padding: 3px;
+  }
+
+  .topnav-right {
+    float: right;
+    margin-right: 15px;
+  }
+
+section {
+  height: 100vh;
+  background: transparent;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: #8a8789;
+  font-size: 5em;
+  font-family: 'baumans', cursive;
+  letter-spacing: 0.1em;
+}
+
+h1 span {
+  opacity: 0;
+  display: inline-block;
+  animation: animate 1s linear forwards;
+}
+
+  @keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0);
+    }
+  }
+
+  h1 span:nth-child(1) {
+    animation-delay: 1s;
+  }
+  h1 span:nth-child(2) {
+    animation-delay: 1.5s;
+  }
+  h1 span:nth-child(3) {
+    animation-delay: 2s;
+  }
+  h1 span:nth-child(4) {
+    animation-delay: 2.5s;
+  }
+  h1 span:nth-child(5) {
+    animation-delay: 3s;
+  }
+  h1 span:nth-child(6) {
+    animation-delay: 3.5s;
+  }
+  h1 span:nth-child(7) {
+    animation-delay: 3.75s;
+  }
+  h1 span:nth-child(8) {
+    animation-delay: 4s;
+  }
+  h1 span:nth-child(9) {
+    animation-delay: 4.25s;
+  }
+  h1 span:nth-child(10) {
+    animation-delay: 4.5s;
+  }
+  h1 span:nth-child(11) {
+    animation-delay: 5s;
+  }
+
+.sidenav {
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  background-color: transparent;
+  overflow: hidden;
+  transition: 0.5s;
+  transform: skewX(45deg);
+}
+
+.sidenav a {
+  float: left;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'baumans', cursive;
+  color: #8a8789;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color:#fdaf47;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  font-size: 36px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.navbtn {
+  color: #fdaf47;
+}
